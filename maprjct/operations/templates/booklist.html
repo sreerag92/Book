@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <br>
+    <table border="1">
+        <tr><th>title</th>
+            <th>author</th>
+            <th>genre</th>
+            <th>link</th>         
+        </tr>
+        {%for bk in qs%}
+<tr>
+    <td>{{bk.title}}</td>
+    <td>{{bk.author}}</td>
+    <td>{{bk.genre}}</td>
+    <td><a href="{% url 'book-dt' bk.id %}">Link</a>
+    <a href="{% url 'book-dlt' bk.id %}">Delete</td>
+</tr>
+        {%endfor%}
+    </table>
+
+</body>
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form method="post" align="center">
+        {%csrf_token%}
+    <div><label>Enter a string :</label><input type="text" name="text"></div>
+    <br><br>
+    
+    <div><button type="submit">Convert</button></div>
+    </form>
+    {{res}}
+    
+</body>
+</html>
